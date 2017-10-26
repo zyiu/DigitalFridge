@@ -1,5 +1,6 @@
 # fridge
 
 ## dates
-November 9th: UI \newline
+November 9th: UI . 
+
 December: everything else
