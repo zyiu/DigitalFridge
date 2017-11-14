@@ -4,7 +4,7 @@ A digital refrigerator that allows users to keep track of they have in their ref
 
 
 ### Team Members:
-Debbie Pao
+Debbie Pao,
 Zachary Yiu
 
 ## Due Dates
