@@ -12,9 +12,18 @@
 		427F13E31FBA9911009FFA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427F13E11FBA9911009FFA04 /* Main.storyboard */; };
 		427F13E51FBA9911009FFA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427F13E41FBA9911009FFA04 /* Assets.xcassets */; };
 		427F13E81FBA9911009FFA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427F13E61FBA9911009FFA04 /* LaunchScreen.storyboard */; };
+		428961001FCF487800D0D657 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42270B631FCF3A7300153D98 /* GoogleService-Info.plist */; };
+		428961021FCF541B00D0D657 /* FridgeLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428961011FCF541B00D0D657 /* FridgeLoginViewController.swift */; };
+		428961041FCF607C00D0D657 /* FridgeSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428961031FCF607C00D0D657 /* FridgeSignupViewController.swift */; };
+		428961061FCF6B5300D0D657 /* FridgeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428961051FCF6B5300D0D657 /* FridgeHomeViewController.swift */; };
+		428961091FCF887B00D0D657 /* FridgeItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428961081FCF887B00D0D657 /* FridgeItems.swift */; };
+		4289610B1FCF8CA500D0D657 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4289610A1FCF8CA500D0D657 /* NewItemViewController.swift */; };
+		42CFC8911FCF9A5D0009B6E3 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CFC8901FCF9A5D0009B6E3 /* CurrentUser.swift */; };
+		C8F325BDCBF35D9F059C2EBB /* Pods_DigitalFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CB831799B59897256DF798 /* Pods_DigitalFridge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42270B631FCF3A7300153D98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		427F13DA1FBA9911009FFA04 /* DigitalFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		427F13DD1FBA9911009FFA04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		427F13DF1FBA9911009FFA04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,15 @@
 		427F13E41FBA9911009FFA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		427F13E71FBA9911009FFA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		427F13E91FBA9912009FFA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		428961011FCF541B00D0D657 /* FridgeLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeLoginViewController.swift; sourceTree = "<group>"; };
+		428961031FCF607C00D0D657 /* FridgeSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeSignupViewController.swift; sourceTree = "<group>"; };
+		428961051FCF6B5300D0D657 /* FridgeHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeHomeViewController.swift; sourceTree = "<group>"; };
+		428961081FCF887B00D0D657 /* FridgeItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItems.swift; sourceTree = "<group>"; };
+		4289610A1FCF8CA500D0D657 /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		42CFC8901FCF9A5D0009B6E3 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		8A15ADB9281B98985F5E5ACB /* Pods-DigitalFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalFridge.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigitalFridge/Pods-DigitalFridge.release.xcconfig"; sourceTree = "<group>"; };
+		8B567C62B5590B3E5D510A2F /* Pods-DigitalFridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalFridge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigitalFridge/Pods-DigitalFridge.debug.xcconfig"; sourceTree = "<group>"; };
+		E7CB831799B59897256DF798 /* Pods_DigitalFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F325BDCBF35D9F059C2EBB /* Pods_DigitalFridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D963F408893065A7D93DE85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B567C62B5590B3E5D510A2F /* Pods-DigitalFridge.debug.xcconfig */,
+				8A15ADB9281B98985F5E5ACB /* Pods-DigitalFridge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		427F13D11FBA9911009FFA04 = {
 			isa = PBXGroup;
 			children = (
 				427F13DC1FBA9911009FFA04 /* DigitalFridge */,
 				427F13DB1FBA9911009FFA04 /* Products */,
+				0D963F408893065A7D93DE85 /* Pods */,
+				C3A98CDED6314C7628E192AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +84,37 @@
 		427F13DC1FBA9911009FFA04 /* DigitalFridge */ = {
 			isa = PBXGroup;
 			children = (
+				428961071FCF87E900D0D657 /* Model */,
+				42270B631FCF3A7300153D98 /* GoogleService-Info.plist */,
 				427F13DD1FBA9911009FFA04 /* AppDelegate.swift */,
 				427F13DF1FBA9911009FFA04 /* ViewController.swift */,
 				427F13E11FBA9911009FFA04 /* Main.storyboard */,
 				427F13E41FBA9911009FFA04 /* Assets.xcassets */,
 				427F13E61FBA9911009FFA04 /* LaunchScreen.storyboard */,
 				427F13E91FBA9912009FFA04 /* Info.plist */,
+				428961011FCF541B00D0D657 /* FridgeLoginViewController.swift */,
+				428961031FCF607C00D0D657 /* FridgeSignupViewController.swift */,
+				428961051FCF6B5300D0D657 /* FridgeHomeViewController.swift */,
+				4289610A1FCF8CA500D0D657 /* NewItemViewController.swift */,
 			);
 			path = DigitalFridge;
+			sourceTree = "<group>";
+		};
+		428961071FCF87E900D0D657 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				428961081FCF887B00D0D657 /* FridgeItems.swift */,
+				42CFC8901FCF9A5D0009B6E3 /* CurrentUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3A98CDED6314C7628E192AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7CB831799B59897256DF798 /* Pods_DigitalFridge.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 427F13EC1FBA9912009FFA04 /* Build configuration list for PBXNativeTarget "DigitalFridge" */;
 			buildPhases = (
+				74F0E1FEF3A07E3BFE9548C0 /* [CP] Check Pods Manifest.lock */,
 				427F13D61FBA9911009FFA04 /* Sources */,
 				427F13D71FBA9911009FFA04 /* Frameworks */,
 				427F13D81FBA9911009FFA04 /* Resources */,
+				3B9EF5CB6AA1E78347A76030 /* [CP] Embed Pods Frameworks */,
+				C11E5353A7F59D4F1C0AEFF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +180,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				427F13E81FBA9911009FFA04 /* LaunchScreen.storyboard in Resources */,
+				428961001FCF487800D0D657 /* GoogleService-Info.plist in Resources */,
 				427F13E51FBA9911009FFA04 /* Assets.xcassets in Resources */,
 				427F13E31FBA9911009FFA04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B9EF5CB6AA1E78347A76030 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DigitalFridge/Pods-DigitalFridge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigitalFridge/Pods-DigitalFridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74F0E1FEF3A07E3BFE9548C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DigitalFridge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C11E5353A7F59D4F1C0AEFF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigitalFridge/Pods-DigitalFridge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		427F13D61FBA9911009FFA04 /* Sources */ = {
@@ -138,6 +251,12 @@
 			files = (
 				427F13E01FBA9911009FFA04 /* ViewController.swift in Sources */,
 				427F13DE1FBA9911009FFA04 /* AppDelegate.swift in Sources */,
+				428961041FCF607C00D0D657 /* FridgeSignupViewController.swift in Sources */,
+				428961091FCF887B00D0D657 /* FridgeItems.swift in Sources */,
+				428961021FCF541B00D0D657 /* FridgeLoginViewController.swift in Sources */,
+				428961061FCF6B5300D0D657 /* FridgeHomeViewController.swift in Sources */,
+				42CFC8911FCF9A5D0009B6E3 /* CurrentUser.swift in Sources */,
+				4289610B1FCF8CA500D0D657 /* NewItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,13 +391,14 @@
 		};
 		427F13ED1FBA9912009FFA04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B567C62B5590B3E5D510A2F /* Pods-DigitalFridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FT29J2MQWX;
 				INFOPLIST_FILE = DigitalFridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Debbie-Pao.DigitalFridge";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdecal.fridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -287,13 +407,14 @@
 		};
 		427F13EE1FBA9912009FFA04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A15ADB9281B98985F5E5ACB /* Pods-DigitalFridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FT29J2MQWX;
 				INFOPLIST_FILE = DigitalFridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Debbie-Pao.DigitalFridge";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdecal.fridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

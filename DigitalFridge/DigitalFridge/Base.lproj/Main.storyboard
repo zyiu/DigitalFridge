@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fridge Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DigitalFridge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FridgeLoginViewController" customModule="DigitalFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,23 +53,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8M-vW-c9j">
-                                <rect key="frame" x="162" y="343" width="46" height="30"/>
+                                <rect key="frame" x="162" y="347" width="46" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHv-df-9cu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzI-Gh-f1P">
+                                <rect key="frame" x="71" y="421" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Don't have an account? Sign Up"/>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="em4-bY-Qqa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.81961278275498528" green="1" blue="0.89936975890749071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextInput" destination="yvH-Sp-0N6" id="vlM-AP-bEK"/>
+                        <outlet property="passwordTextInput" destination="A9N-YH-hVu" id="8Le-Lz-IQk"/>
+                        <segue destination="hzm-wb-aEy" kind="show" identifier="LogInToSignUp" id="Uux-lw-Tq3"/>
+                        <segue destination="gmr-Xe-Mgt" kind="show" identifier="fromLogintoHome" id="aZ3-1u-RLl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="485.60000000000002" y="245.12743628185908"/>
         </scene>
-        <!--View Controller-->
+        <!--Fridge Signup View Controller-->
         <scene sceneID="v4w-2H-DC2">
             <objects>
-                <viewController id="hzm-wb-aEy" sceneMemberID="viewController">
+                <viewController id="hzm-wb-aEy" customClass="FridgeSignupViewController" customModule="DigitalFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnd-3l-ybD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,15 +144,161 @@
                                 <rect key="frame" x="160" y="435" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButtonIsPressed:" destination="hzm-wb-aEy" eventType="touchUpInside" id="qYP-Mq-ea7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FR-qX-SOe">
+                                <rect key="frame" x="79" y="484" width="217" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Already have an account? Login"/>
+                                <connections>
+                                    <action selector="goToLoginPage:" destination="hzm-wb-aEy" eventType="touchUpInside" id="CdJ-mB-Bwh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.78147606193368846" green="0.86122529065087738" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="DMk-Md-DVb"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Zl7-DF-FFr" id="JLf-rj-UVw"/>
+                        <outlet property="passwordTextField" destination="9ty-8q-6ab" id="ayJ-6h-p6H"/>
+                        <outlet property="passwordVerificationTextField" destination="fgz-Fa-EMk" id="Rdv-oN-Tjm"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToLogin" id="ccH-65-BBm"/>
+                        <segue destination="gmr-Xe-Mgt" kind="show" identifier="fromSignuptoHome" id="oJ2-ca-vCs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKx-Vo-qQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1364" y="245"/>
         </scene>
+        <!--Fridge Home View Controller-->
+        <scene sceneID="8w4-7H-WgI">
+            <objects>
+                <viewController id="gmr-Xe-Mgt" customClass="FridgeHomeViewController" customModule="DigitalFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yb2-dr-FmB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bq-ML-A5I">
+                                <rect key="frame" x="154" y="262" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glh-op-eZB">
+                                <rect key="frame" x="7" y="20" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Item"/>
+                                <connections>
+                                    <action selector="addNewItem:" destination="gmr-Xe-Mgt" eventType="touchUpInside" id="OVQ-Lv-UCo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="AIt-qh-pGG"/>
+                    </view>
+                    <connections>
+                        <segue destination="NDk-qX-bRW" kind="show" identifier="addnewItem" id="zKH-6j-Pgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMZ-h7-kVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.79999999999995" y="959.37031484257875"/>
+        </scene>
+        <!--New Item View Controller-->
+        <scene sceneID="bbh-33-egp">
+            <objects>
+                <viewController id="NDk-qX-bRW" customClass="NewItemViewController" customModule="DigitalFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZjJ-mm-Ra7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8G-z3-VtK">
+                                <rect key="frame" x="116" y="223" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iy3-oo-exQ">
+                                <rect key="frame" x="116" y="293" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAs-lT-bpB">
+                                <rect key="frame" x="116" y="182" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expiration Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhA-DH-pGc">
+                                <rect key="frame" x="116" y="264" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C8W-gr-3bu">
+                                <rect key="frame" x="116" y="374" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date Bought:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oN-sd-41t">
+                                <rect key="frame" x="116" y="345" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luH-Fw-dKT">
+                                <rect key="frame" x="156" y="496" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Item"/>
+                                <connections>
+                                    <action selector="addItemPressed:" destination="NDk-qX-bRW" eventType="touchUpInside" id="537-jc-Rxj"/>
+                                    <action selector="signUpButtonIsPressed:" destination="hzm-wb-aEy" eventType="touchUpInside" id="H0y-DQ-63W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-xb-VqJ">
+                                <rect key="frame" x="144" y="432" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload a photo"/>
+                                <connections>
+                                    <action selector="signUpButtonIsPressed:" destination="hzm-wb-aEy" eventType="touchUpInside" id="AvA-2j-trp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cg-Me-VRc">
+                                <rect key="frame" x="133" y="104" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="uY5-zn-fCz"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateField" destination="C8W-gr-3bu" id="6Xc-fJ-iqb"/>
+                        <outlet property="expirationField" destination="Iy3-oo-exQ" id="YeU-Fy-1se"/>
+                        <outlet property="nameField" destination="e8G-z3-VtK" id="GU6-EH-NEg"/>
+                        <segue destination="gmr-Xe-Mgt" kind="show" identifier="goToHomePage" id="7hB-MQ-oVa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aon-G0-HzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="1039"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zKH-6j-Pgs"/>
+        <segue reference="7hB-MQ-oVa"/>
+    </inferredMetricsTieBreakers>
 </document>
