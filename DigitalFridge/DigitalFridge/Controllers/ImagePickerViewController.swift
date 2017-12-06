@@ -177,7 +177,7 @@ class ImagePickerViewController: UIViewController, AVCapturePhotoCaptureDelegate
             sendButton.isHidden = true
             cancelButton.isHidden = true
             imageViewOverlay.image = nil
-            flipCameraButton.isHidden = false
+            flipCameraButton.isHidden = true
         }
     }
     

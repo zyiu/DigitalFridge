@@ -301,7 +301,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ec6-co-Rwk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ec6-co-Rwk">
                                 <rect key="frame" x="0.0" y="64" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86075635520000005" green="0.84790924540000001" blue="0.87360346499999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -370,29 +370,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7T-rJ-ts6">
                                 <rect key="frame" x="0.0" y="10" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETQ-wD-a82">
-                                <rect key="frame" x="315" y="498" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrS-Af-wAf">
+                                <rect key="frame" x="137" y="473" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="89m-Tm-Vr9"/>
-                                    <constraint firstAttribute="width" secondItem="ETQ-wD-a82" secondAttribute="height" multiplier="1:1" id="fVT-GH-oGp"/>
-                                    <constraint firstAttribute="width" constant="50" id="iJI-4h-rJG"/>
+                                    <constraint firstAttribute="width" secondItem="OrS-Af-wAf" secondAttribute="height" multiplier="1:1" id="GSd-vY-Vm1"/>
                                 </constraints>
-                                <state key="normal" image="sendPhoto"/>
+                                <state key="normal" image="takePhoto"/>
+                                <connections>
+                                    <action selector="takePhotoButtonWasPressed:" destination="1wv-Rw-hqb" eventType="touchUpInside" id="vRO-DW-KDq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETQ-wD-a82">
+                                <rect key="frame" x="285" y="493" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="89m-Tm-Vr9"/>
+                                    <constraint firstAttribute="width" secondItem="ETQ-wD-a82" secondAttribute="height" multiplier="1:1" id="fVT-GH-oGp"/>
+                                    <constraint firstAttribute="width" constant="60" id="iJI-4h-rJG"/>
+                                </constraints>
+                                <state key="normal" image="check_white_192x192"/>
                                 <connections>
                                     <action selector="sendButtonWasPressed:" destination="1wv-Rw-hqb" eventType="touchUpInside" id="9pC-Lp-u1l"/>
                                     <segue destination="jZc-iU-8IB" kind="unwind" identifier="unwindToImagePicker" unwindAction="unwindToImagePickerWithSegue:" id="mKS-yW-Gfd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jth-oq-czR">
-                                <rect key="frame" x="10" y="114" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Jth-oq-czR" secondAttribute="height" multiplier="1:1" id="9kc-6X-99f"/>
-                                    <constraint firstAttribute="width" constant="50" id="OEb-ag-drk"/>
-                                    <constraint firstAttribute="height" constant="50" id="q2C-rW-Ua9"/>
-                                </constraints>
-                                <state key="normal" image="cancel"/>
-                                <connections>
-                                    <action selector="cancelButtonWasPressed:" destination="1wv-Rw-hqb" eventType="touchUpInside" id="mma-ft-C0Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZx-9v-GK5">
@@ -407,14 +405,16 @@
                                     <action selector="flipCameraButtonWasPressed:" destination="1wv-Rw-hqb" eventType="touchUpInside" id="kaB-Ad-uhC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrS-Af-wAf">
-                                <rect key="frame" x="137" y="473" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jth-oq-czR">
+                                <rect key="frame" x="30" y="498" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="OrS-Af-wAf" secondAttribute="height" multiplier="1:1" id="GSd-vY-Vm1"/>
+                                    <constraint firstAttribute="width" secondItem="Jth-oq-czR" secondAttribute="height" multiplier="1:1" id="9kc-6X-99f"/>
+                                    <constraint firstAttribute="width" constant="50" id="OEb-ag-drk"/>
+                                    <constraint firstAttribute="height" constant="50" id="q2C-rW-Ua9"/>
                                 </constraints>
-                                <state key="normal" image="takePhoto"/>
+                                <state key="normal" image="cancel"/>
                                 <connections>
-                                    <action selector="takePhotoButtonWasPressed:" destination="1wv-Rw-hqb" eventType="touchUpInside" id="vRO-DW-KDq"/>
+                                    <action selector="cancelButtonWasPressed:" destination="1wv-Rw-hqb" eventType="touchUpInside" id="mma-ft-C0Q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -426,12 +426,12 @@
                             <constraint firstItem="QZx-9v-GK5" firstAttribute="top" secondItem="Xa5-JT-SnR" secondAttribute="top" constant="50" id="F0t-cB-LDd"/>
                             <constraint firstItem="j7T-rJ-ts6" firstAttribute="width" secondItem="9qQ-Q3-zer" secondAttribute="width" id="FVk-bV-Nyh"/>
                             <constraint firstItem="Xa5-JT-SnR" firstAttribute="bottom" secondItem="OrS-Af-wAf" secondAttribute="bottom" constant="50" id="FW3-4A-t5H"/>
-                            <constraint firstItem="Jth-oq-czR" firstAttribute="top" secondItem="Xa5-JT-SnR" secondAttribute="top" constant="50" id="NYD-5e-lat"/>
-                            <constraint firstItem="Xa5-JT-SnR" firstAttribute="trailing" secondItem="ETQ-wD-a82" secondAttribute="trailing" constant="10" id="Xk8-UK-oqs"/>
+                            <constraint firstItem="Xa5-JT-SnR" firstAttribute="trailing" secondItem="ETQ-wD-a82" secondAttribute="trailing" constant="30" id="Xk8-UK-oqs"/>
                             <constraint firstItem="Xa5-JT-SnR" firstAttribute="trailing" secondItem="QZx-9v-GK5" secondAttribute="trailing" constant="10" id="dVm-OF-CPg"/>
                             <constraint firstItem="j7T-rJ-ts6" firstAttribute="height" secondItem="9qQ-Q3-zer" secondAttribute="height" id="gGZ-hF-QHC"/>
                             <constraint firstItem="j7T-rJ-ts6" firstAttribute="centerY" secondItem="Xa5-JT-SnR" secondAttribute="centerY" id="h6s-eD-jIt"/>
-                            <constraint firstItem="Jth-oq-czR" firstAttribute="leading" secondItem="Xa5-JT-SnR" secondAttribute="leading" constant="10" id="wfl-SL-pYL"/>
+                            <constraint firstItem="Jth-oq-czR" firstAttribute="centerY" secondItem="OrS-Af-wAf" secondAttribute="centerY" id="oA9-lc-LLn"/>
+                            <constraint firstItem="Jth-oq-czR" firstAttribute="leading" secondItem="Xa5-JT-SnR" secondAttribute="leading" constant="30" id="zRn-eg-bXH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xa5-JT-SnR"/>
                     </view>
@@ -452,15 +452,15 @@
     <resources>
         <image name="camera" width="700" height="700"/>
         <image name="cancel" width="100" height="100"/>
+        <image name="check_white_192x192" width="192" height="192"/>
         <image name="flipCamera" width="100" height="100"/>
         <image name="food" width="700" height="700"/>
         <image name="login" width="160" height="40"/>
         <image name="logo" width="1095" height="1095"/>
-        <image name="sendPhoto" width="132" height="130"/>
         <image name="signup" width="160" height="40"/>
         <image name="takePhoto" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oJ2-ca-vCs"/>
+        <segue reference="7hB-MQ-oVa"/>
     </inferredMetricsTieBreakers>
 </document>
