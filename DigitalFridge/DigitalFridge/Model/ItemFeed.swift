@@ -14,6 +14,16 @@ import FirebaseAuth
 
 var user: String = "";
 
+var itemArray: [FridgeItem] = []
+
+func addItemtoArray(item: FridgeItem) {
+    itemArray.append(item)
+}
+
+func getItemFromIndexPath(indexPath: IndexPath) -> FridgeItem? {
+    return itemArray[indexPath.row]
+}
+
 //ADDS NEW ITEM TO FIREBASE
 func addItem(itemName: String, expirDate: String, dateBought: String) {
     print("adding to firebase")
@@ -37,34 +47,38 @@ func addItem(itemName: String, expirDate: String, dateBought: String) {
     }
 }
 
+func clearItems() {
+    itemArray = []
+}
+
 //GET ITEMS FROM FIREBASE FOR EACH USER
-func getItemsInFridge() {
+func getItemsInFridge(completion: @escaping ([FridgeItem]?) -> Void) {
     let dbRef = FIRDatabase.database().reference()
     if let currentUser = FIRAuth.auth()?.currentUser?.email {
         var arr = currentUser.components(separatedBy: ".")
         user = arr[0]
     }
+    var itemArr: [FridgeItem] = []
     dbRef.child("/\(user)/Items").observeSingleEvent(of: .value, with: { snapshot -> Void in
         if snapshot.exists() {
             if let posts = snapshot.value as? [String:AnyObject] {
-                print(posts)
-                /*
-                 RETURNS BACK THIS:
-                 ["-L-9xCjiQvGPkFfHGHQF": {
-                 dateBought = "11/1/17";
-                 expiration = "12/1/17";
-                 itemName = cookies;
-                 }, "-L-9ynDUYTrOkcNBOd3-": {
-                 dateBought = "1/1/17";
-                 expiration = "1/1/18";
-                 itemName = soda;
-                 }, "-L-9x6-RE4DZHDI2czHq": {
-                 dateBought = "12/1/17";
-                 expiration = "1/1/18";
-                 itemName = toast;
-                 }]
-                 */
+                for postKey in posts.keys {
+                    if let value = posts[postKey]as? [String:AnyObject] {
+                        let name = value["itemName"]
+                        let expiration = value["expiration"]
+                        let dateBought = value["dateBought"]
+                        let item = FridgeItem(name: name as! String, expiration: expiration as! String, dateBought: dateBought as! String)
+                        itemArr.append(item)
+                    } else {
+                        completion(nil)
+                    }
+                }
+                completion(itemArr)
+            } else {
+                completion(nil)
             }
+        } else {
+            completion(nil)
         }
     })
 }
