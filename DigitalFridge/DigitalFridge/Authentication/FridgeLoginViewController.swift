@@ -26,12 +26,12 @@ class FridgeLoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextInput.delegate = self
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        // Checks if user is already signed in and skips login
-//        if FIRAuth.auth()?.currentUser != nil {
-//            self.performSegue(withIdentifier: "fromLogintoHome", sender: self)
-//        }
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        // Checks if user is already signed in and skips login
+        if FIRAuth.auth()?.currentUser != nil {
+            self.performSegue(withIdentifier: "fromLogintoHome", sender: self)
+        }
+    }
     
     @IBAction func loginPressed(_ sender: UIButton) {
         guard let emailText = emailTextInput.text else { return }
