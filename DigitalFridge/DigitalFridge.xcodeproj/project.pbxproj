@@ -18,13 +18,11 @@
 		4289610B1FCF8CA500D0D657 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4289610A1FCF8CA500D0D657 /* NewItemViewController.swift */; };
 		42CFC8911FCF9A5D0009B6E3 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CFC8901FCF9A5D0009B6E3 /* CurrentUser.swift */; };
 		C8F325BDCBF35D9F059C2EBB /* Pods_DigitalFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CB831799B59897256DF798 /* Pods_DigitalFridge.framework */; };
-		FC4144271FD8083100120C52 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4144261FD8083100120C52 /* login.png */; };
-		FC4144291FD808E000120C52 /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4144281FD808E000120C52 /* signup.png */; };
+		FCA635351FD82B12001C7CA4 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA635341FD82B12001C7CA4 /* ImagePickerViewController.swift */; };
 		FCBFA20D1FD7EE27005AB75A /* ItemFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428961081FCF887B00D0D657 /* ItemFeed.swift */; };
 		FCBFA20E1FD7EE59005AB75A /* FridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4C98B1FD7DB43005E4E26 /* FridgeItem.swift */; };
 		FCBFA20F1FD7EEAA005AB75A /* FridgeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428961051FCF6B5300D0D657 /* FridgeCollectionViewController.swift */; };
 		FCBFA2111FD7F912005AB75A /* FridgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFA2101FD7F912005AB75A /* FridgeTableViewCell.swift */; };
-		FCBFA2151FD80404005AB75A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCBFA2141FD803C4005AB75A /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,11 +43,9 @@
 		8A15ADB9281B98985F5E5ACB /* Pods-DigitalFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalFridge.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigitalFridge/Pods-DigitalFridge.release.xcconfig"; sourceTree = "<group>"; };
 		8B567C62B5590B3E5D510A2F /* Pods-DigitalFridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalFridge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigitalFridge/Pods-DigitalFridge.debug.xcconfig"; sourceTree = "<group>"; };
 		E7CB831799B59897256DF798 /* Pods_DigitalFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC4144261FD8083100120C52 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
-		FC4144281FD808E000120C52 /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
 		FCA4C98B1FD7DB43005E4E26 /* FridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItem.swift; sourceTree = "<group>"; };
+		FCA635341FD82B12001C7CA4 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		FCBFA2101FD7F912005AB75A /* FridgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeTableViewCell.swift; sourceTree = "<group>"; };
-		FCBFA2141FD803C4005AB75A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +99,6 @@
 				427F13E61FBA9911009FFA04 /* LaunchScreen.storyboard */,
 				427F13E91FBA9912009FFA04 /* Info.plist */,
 				FCBFA2101FD7F912005AB75A /* FridgeTableViewCell.swift */,
-				FC4144281FD808E000120C52 /* signup.png */,
-				FCBFA2141FD803C4005AB75A /* logo.png */,
-				FC4144261FD8083100120C52 /* login.png */,
 				FCA4C98D1FD7E1E7005E4E26 /* Authentication */,
 				FCA4C9941FD7EBD5005E4E26 /* Controllers */,
 			);
@@ -144,6 +137,7 @@
 			children = (
 				428961051FCF6B5300D0D657 /* FridgeCollectionViewController.swift */,
 				4289610A1FCF8CA500D0D657 /* NewItemViewController.swift */,
+				FCA635341FD82B12001C7CA4 /* ImagePickerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,10 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				427F13E81FBA9911009FFA04 /* LaunchScreen.storyboard in Resources */,
-				FC4144271FD8083100120C52 /* login.png in Resources */,
-				FCBFA2151FD80404005AB75A /* logo.png in Resources */,
 				428961001FCF487800D0D657 /* GoogleService-Info.plist in Resources */,
-				FC4144291FD808E000120C52 /* signup.png in Resources */,
 				427F13E51FBA9911009FFA04 /* Assets.xcassets in Resources */,
 				427F13E31FBA9911009FFA04 /* Main.storyboard in Resources */,
 			);
@@ -288,6 +279,7 @@
 				428961041FCF607C00D0D657 /* FridgeSignupViewController.swift in Sources */,
 				428961021FCF541B00D0D657 /* FridgeLoginViewController.swift in Sources */,
 				42CFC8911FCF9A5D0009B6E3 /* CurrentUser.swift in Sources */,
+				FCA635351FD82B12001C7CA4 /* ImagePickerViewController.swift in Sources */,
 				FCBFA20D1FD7EE27005AB75A /* ItemFeed.swift in Sources */,
 				FCBFA2111FD7F912005AB75A /* FridgeTableViewCell.swift in Sources */,
 				FCBFA20F1FD7EEAA005AB75A /* FridgeCollectionViewController.swift in Sources */,

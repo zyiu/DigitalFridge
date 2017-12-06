@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class FridgeLoginViewController: UIViewController {
+class FridgeLoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextInput: UITextField!
 
@@ -22,7 +22,16 @@ class FridgeLoginViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.emailTextInput.delegate = self
+        self.passwordTextInput.delegate = self
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        // Checks if user is already signed in and skips login
+//        if FIRAuth.auth()?.currentUser != nil {
+//            self.performSegue(withIdentifier: "fromLogintoHome", sender: self)
+//        }
+//    }
     
     @IBAction func loginPressed(_ sender: UIButton) {
         guard let emailText = emailTextInput.text else { return }
@@ -81,6 +90,11 @@ class FridgeLoginViewController: UIViewController {
                 self.userPassword = textField.text!
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
 }

@@ -21,6 +21,7 @@ class FridgeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var expirationLabel: UILabel!
 }

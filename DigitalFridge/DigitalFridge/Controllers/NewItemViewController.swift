@@ -16,17 +16,31 @@ class NewItemViewController: UIViewController {
     
     @IBOutlet weak var dateField: UITextField!
     
+    var chosenImage: UIImage?
+    @IBOutlet weak var chosenImageView: UIImageView!
+    
+    
     var name = ""
     var expirationDate = ""
     var dateBought = ""
     
-    @IBAction func addItemPressed(_ sender: UIButton) {
+    @IBAction func donePressed(_ sender: UIBarButtonItem) {
         guard let userName = nameField.text else { return }
         guard let expirDate = expirationField.text else { return }
         guard let dateBuy = dateField.text else { return }
         
-        addItem(itemName: userName, expirDate: expirDate, dateBought: dateBuy)
-        performSegue(withIdentifier: "goToHomePage", sender: nil)
+        if let imageToPost = chosenImage {
+            addItem(itemName: userName, expirDate: expirDate, dateBought: dateBuy, postImage: imageToPost)
+            performSegue(withIdentifier: "goToHomePage", sender: nil)
+        } else {
+            addItem(itemName: userName, expirDate: expirDate, dateBought: dateBuy)
+            performSegue(withIdentifier: "goToHomePage", sender: nil)
+        }
+        
+    }
+    
+    @IBAction func cameraPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToImagePicker", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -53,6 +67,10 @@ class NewItemViewController: UIViewController {
                 self.dateBought = textField.text!
             }
         }
+    }
+    
+    // Called when we unwind from the ChooseThreadViewController
+    @IBAction func unwindToImagePicker(segue: UIStoryboardSegue) {
     }
     
 

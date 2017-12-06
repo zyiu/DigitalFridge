@@ -12,10 +12,12 @@ import Foundation
     let name: String!
     let expiration: String!
     let dateBought: String!
+    let imagePath: String!
     
-    init(name: String, expiration: String, dateBought: String) {
+    init(name: String, expiration: String, dateBought: String, imagePath: String) {
         self.name = name
         self.expiration = expiration
         self.dateBought = dateBought
+        self.imagePath = imagePath
     }
 }

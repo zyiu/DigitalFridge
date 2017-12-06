@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class FridgeSignupViewController: UIViewController {
+class FridgeSignupViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -66,8 +66,11 @@ class FridgeSignupViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.passwordVerificationTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,6 +94,10 @@ class FridgeSignupViewController: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 
     /*
     // MARK: - Navigation

@@ -20,13 +20,16 @@ class FridgeHomeViewController: UIViewController, UITableViewDelegate, UITableVi
         if let post = getItemFromIndexPath(indexPath: indexPath) {
             cell.nameLabel.text = post.name
             cell.expirationLabel.text = post.expiration
+            if let image = loadedImages[post.name] {
+                cell.foodImageView.image = image
+            }
         }
         return cell
     }
 
     @IBOutlet weak var itemTableView: UITableView!
     
-    
+    var loadedImages: [String: UIImage] = [:]
     
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "addnewItem", sender: self)
@@ -66,13 +69,15 @@ class FridgeHomeViewController: UIViewController, UITableViewDelegate, UITableVi
                 clearItems()
                 for item in items {
                     addItemtoArray(item: item)
-//                    getDataFromPath(path: item.postImagePath, completion: { (data) in
-//                        if let data = data {
-//                            if let image = UIImage(data: data) {
-//                                self.loadedImagesById[post.postId] = image
-//                            }
-//                        }
-//                    })
+                    if item.imagePath != "" {
+                        getDataFromPath(path: item.imagePath, completion: { (data) in
+                            if let data = data {
+                                if let image = UIImage(data: data) {
+                                    self.loadedImages[item.name] = image
+                                }
+                            }
+                        })
+                    }
                 }
                 self.itemTableView.reloadData()
             }
